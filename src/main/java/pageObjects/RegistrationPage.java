@@ -69,7 +69,7 @@ public class RegistrationPage {
     }
 
 
-    public LoginPage ClickRegistrationBtn() {
+    public LoginPage сlickRegistrationBtn() {
         this.registrationBtn.click();
         return page(LoginPage.class);
     }

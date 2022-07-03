@@ -1,9 +1,11 @@
-package Api;
+package model;
 
 import lombok.Builder;
 import lombok.Data;
 
-public @Data @Builder class UserCredentials {
+@Data
+@Builder
+public class UserCredentials {
     private String email;
     private String password;
 }

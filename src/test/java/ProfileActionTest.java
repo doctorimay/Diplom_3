@@ -1,5 +1,5 @@
-import Api.User;
-import Api.UserClient;
+import model.User;
+import client.UserClient;
 
 import com.codeborne.selenide.Selenide;
 

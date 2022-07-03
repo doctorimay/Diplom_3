@@ -1,6 +1,6 @@
-import Api.User;
-import Api.UserClient;
-import Api.UserCredentials;
+import model.User;
+import client.UserClient;
+import model.UserCredentials;
 import com.codeborne.selenide.Selenide;
 import org.apache.commons.lang3.RandomStringUtils;
 import io.restassured.response.ValidatableResponse;
@@ -51,7 +51,7 @@ public class RegistrationTest {
                 .setEmailField(user.email)
                 .clickPasswordField()
                 .setPasswordField(user.password)
-                .ClickRegistrationBtn();
+                .сlickRegistrationBtn();
         ValidatableResponse loginResponse = userClient.loginUser(UserCredentials.builder().email(user.email).password(user.password).build());
         accessToken = loginResponse.extract().path("accessToken");
         assertThat( accessToken, notNullValue());
@@ -70,7 +70,7 @@ public class RegistrationTest {
                 .setEmailField(user.email)
                 .clickPasswordField()
                 .setPasswordField(RandomStringUtils.randomAlphabetic(5))
-                .ClickRegistrationBtn();
+                .сlickRegistrationBtn();
         assertTrue(registrationPage.ErrorPasswordFieldTextIsDisplayed());
     }
 }

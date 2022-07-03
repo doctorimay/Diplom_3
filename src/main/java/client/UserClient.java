@@ -1,9 +1,11 @@
-package Api;
+package client;
 
 
 import io.restassured.response.ValidatableResponse;
+import model.User;
+import model.UserCredentials;
 
-import static Api.RestAssuredClient.getBaseSpec;
+import static client.RestAssuredClient.getBaseSpec;
 import static io.restassured.RestAssured.given;
 
 public class UserClient {

@@ -1,5 +1,5 @@
-import Api.User;
-import Api.UserClient;
+import model.User;
+import client.UserClient;
 
 import com.codeborne.selenide.Selenide;
 import io.restassured.response.ValidatableResponse;
@@ -50,7 +50,7 @@ public class LoginUserTest {
                 .clickPasswordField()
                 .enterPassword(user.password)
                 .clickEnterBtn();
-        assertTrue(mainPage.CreateOrderBtnIsDisplayed());
+        assertTrue(mainPage.createOrderBtnIsDisplayed());
     }
 
     @Test // Авторизация через кнопку "Личный кабинет"
@@ -63,7 +63,7 @@ public class LoginUserTest {
                 .clickPasswordField()
                 .enterPassword(user.password)
                 .clickEnterBtn();
-        assertTrue(mainPage.CreateOrderBtnIsDisplayed());
+        assertTrue(mainPage.createOrderBtnIsDisplayed());
     }
 
     @Test // Авторизация через кнопку в форме регистрации
@@ -83,7 +83,7 @@ public class LoginUserTest {
                 .enterPassword(user.password)
                 .clickEnterBtn();
 
-        assertTrue(mainPage.CreateOrderBtnIsDisplayed());
+        assertTrue(mainPage.createOrderBtnIsDisplayed());
     }
 
     @Test // Авторизация пользователя в форме восстановления пароля
@@ -99,6 +99,6 @@ public class LoginUserTest {
                 .clickPasswordField()
                 .enterPassword(user.password)
                 .clickEnterBtn();
-        assertTrue(mainPage.CreateOrderBtnIsDisplayed());
+        assertTrue(mainPage.createOrderBtnIsDisplayed());
     }
 }

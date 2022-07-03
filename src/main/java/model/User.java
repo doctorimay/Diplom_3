@@ -1,10 +1,12 @@
-package Api;
+package model;
 
 import lombok.Builder;
 import lombok.Data;
 import org.apache.commons.lang3.RandomStringUtils;
 
-public @Data @Builder class User {
+@Data
+@Builder
+public class User {
     public String email;
     public String password;
     public String name;

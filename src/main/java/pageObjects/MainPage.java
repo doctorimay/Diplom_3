@@ -99,7 +99,7 @@ public class MainPage {
     }
 
 
-    public boolean CreateOrderBtnIsDisplayed() {
+    public boolean createOrderBtnIsDisplayed() {
         return createOrderBtn.shouldBe(visible).isDisplayed();
     }
 

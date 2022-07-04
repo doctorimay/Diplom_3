@@ -1,3 +1,4 @@
+import com.codeborne.selenide.Configuration;
 import model.User;
 import client.UserClient;
 import model.UserCredentials;
@@ -25,6 +26,7 @@ public class RegistrationTest {
 
     @Before
     public void setUp() {
+        Configuration.browser = "Chrome";
         userClient = new UserClient();
         user = User.getRandom();
     }

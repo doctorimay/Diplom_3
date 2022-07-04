@@ -1,4 +1,5 @@
 
+import com.codeborne.selenide.Configuration;
 import org.junit.Before;
 import org.junit.Test;
 import pageObjects.MainPage;
@@ -11,6 +12,7 @@ public class ConstructorTest {
 
     @Before
     public void setUp() {
+        Configuration.browser = "Chrome";
         mainPage = open(MainPage.MAIN_URL, MainPage.class);
     }
 
